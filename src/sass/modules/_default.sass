@@ -1,0 +1,122 @@
+@import '../helpers/var'
+
+*, *:before, *:after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html,
+body
+    margin: 0
+    padding: 0
+    font-family: Raleway
+    overflow-x: hidden
+    position: relative
+    background-color: $black
+    color: $white
+    scroll-behavior: smooth
+
+a
+    color: $black
+    transition: color 0.3s ease-in-out
+    text-decoration: none
+    &:hover
+        color: $white
+
+strong
+    font-weight: 700
+canvas
+    position: fixed
+    z-index: 1
+
+main
+    position: relative
+    z-index: 5
+
+.container
+    width: 70%
+    position: relative
+    margin: 0 auto
+    display: flex
+
+.title
+    font-weight: 700
+.insert
+    font-weight: 800
+    color: $yellow
+    margin-left: 0.25rem
+
+.link
+    font-size: calc(0.25rem + 1vw)
+    line-height: calc(0.25rem + 1.5vw)
+    text-align: center
+    width: 15rem
+    padding: 1.25rem 2rem
+    border: 1px solid $yellow
+    color: $yellow
+    transition: $transition
+    &:active,
+    &:hover,
+    &:focus
+        cursor: pointer
+        background-color: rgba($yellow, 0.5)
+        color: $white
+
+.section
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20%
+    font-size: 2rem
+    line-height: 3rem
+    text-align: center
+    min-height: 100vh
+    &:nth-child(even)
+        background-color: black
+        color: $white
+
+.btn
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    border: none
+    padding: 1rem 1.5rem
+    border-radius: 3px
+    font-size: calc(0.25rem + 0.75vw)
+    background-color: transparent
+    font-family: NewYork
+
+    &--color
+        background-color: $red
+        color: $white
+
+.main-color
+    color: $red
+    font-style: italic
+
+@media screen and ( max-width: 1600px)
+    .container
+        width: 80%
+
+@media screen and ( max-width: 1366px)
+    .container
+        width: 85%
+
+@media screen and ( max-width: 768px)
+    .link
+        font-size: calc(0.5rem + 1.25vw)
+        line-height: calc(0.5rem + 1.75vw)
+
+@media screen and ( max-width: 600px)
+    .link
+        font-size: calc(0.5rem + 1.75vw)
+        line-height: calc(0.5rem + 2.75vw)
+
+@media screen and ( max-width: 480px)
+    .container
+        width: 94%
+
+    .link
+        font-size: calc(0.5rem + 2.5vw)
+        line-height: calc(0.5rem + 4vw)
